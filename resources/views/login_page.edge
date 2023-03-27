@@ -8,9 +8,9 @@
     <div class="mb-3 row">
       <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="staticEmail" value="email@example.com">
+        <input type="text" class="form-control" id="staticEmail">
         @if(flashMessages.has('errors.username'))
-          <p> {{ flashMessages.get('errors.username') }}</p>
+          <p class="text-danger"> {{ flashMessages.get('errors.username') }}</p>
         @end
       </div>
     </div>
@@ -19,7 +19,7 @@
       <div class="col-sm-10">
         <input type="password" class="form-control" id="inputPassword">
         @if(flashMessages.has('errors.password'))
-          <p> {{ flashMessages.get('errors.password') }}</p>
+          <p class="text-danger"> {{ flashMessages.get('errors.password') }}</p>
         @end
       </div>
     </div>
