@@ -8,7 +8,7 @@ export default class AuthController {
 
   public async store({ request }: HttpContextContract) {
     const dto = schema.create({
-      username: schema.string({}),
+      username: schema.string(),
       password: schema.string(),
     })
     const payload = await request.validate({
